@@ -18,15 +18,25 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
-        const url = 'https://script.google.com/macros/s/AKfycbwfJvOoK_hgp-cQbbXpvrl3ok2YARqAcebx1sfsYtu7afv8BXhg1aiV8Ai7JdaKf00w/exec/65'
+        const url = 'https://script.google.com/macros/s/AKfycbwfJvOoK_hgp-cQbbXpvrl3ok2YARqAcebx1sfsYtu7afv8BXhg1aiV8Ai7JdaKf00w/exec'
         const btn = document.querySelector("button")
 
         btn.addEventListener('click',(e) =>{
-            fetch(url)
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-            })
+            // fetch(url)
+            // .then(res => res.json())
+            // .then(data => {
+            //     console.log(data)
+            // })
+            fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'text/plain;charset=utf-8',
+                }
+            }).then(response => {
+                console.log("success:", response);
+            }).catch(err => {
+                console.log("Error:" + err);
+            });
         })
         // jQuery.ajax({
         //     crossDomain: true,
