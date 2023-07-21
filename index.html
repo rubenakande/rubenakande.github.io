@@ -18,10 +18,15 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
+        const url = 'https://script.google.com/macros/s/AKfycbyWhBdfc1L6hEk36RC7Ye8Ql12SRAtMmPwmbttcqzg/dev/65'
         const btn = document.querySelector("button")
 
         btn.addEventListener('click',(e) =>{
-            alert("Hello World")
+            fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+            })
         })
     </script>
 </body>
