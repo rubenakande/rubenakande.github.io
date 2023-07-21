@@ -32,10 +32,9 @@
                 headers: {
                     'Content-Type': 'text/plain;charset=utf-8',
                 }
-            }).then(res => res.json())
-            .then(data => {
+            }).then(data => {
                 console.log("success:", res);
-                console.log(data)
+                // console.log(data)
             })
             .catch(err => {
                 console.log("Error:" + err);
