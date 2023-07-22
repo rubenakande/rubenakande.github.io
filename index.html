@@ -34,8 +34,8 @@
                 headers: {
                     'Content-Type': 'text/plain;charset=utf-8',
                 }
-            }).then(res => {
-                console.log("success:", res);
+            }).then(res => res.json()).then(data => {
+                console.log("success:", data);
                 // console.log(data)
             })
             .catch(err => {
